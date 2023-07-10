@@ -1,0 +1,20 @@
+name: dbwe
+dependencies:
+  - python=3.10
+  - conda
+  - pip
+  - pip:
+      - ipykernel
+      - numpy
+      - matplotlib
+      - openpyxl
+      - pylint
+      - mariadb
+      - Flask
+      - wtforms
+      - flask_wtf
+      - flask-sqlalchemy
+      - flask-migrate
+      - flask-login
+      - werkzeug
+      - email-validator

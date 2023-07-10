@@ -1,0 +1,16 @@
+{% macro render(person) %}
+<table border="1">
+    <tr>
+        <td>Firstname</td>
+        <td>{{ person.firstname }}</td>
+    </tr>
+    <tr>
+        <td>Lastname</td>
+        <td>{{ person.lastname }}</td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td>{{ person.birthday }}</td>
+    </tr>
+</table>
+{% endmacro %}

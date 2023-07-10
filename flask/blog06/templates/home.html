@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Home</h1>    
+
+    Welcome {{ username }}
+
+    <h2>Posts</h2>
+
+    <ul>
+        {% for p in posts %}
+        <li>{{ p.author.username }}: {{  p.body }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
