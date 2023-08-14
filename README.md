@@ -43,6 +43,12 @@ create database course;
 use course;
 ``` 
 
+### Load and execute script
+``` 
+source path/to/your/script.sql;
+``` 
+
+
 # Python
 
 ## Scripts
