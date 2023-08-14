@@ -30,7 +30,7 @@ password: admin
 
 ### Start Terminal als Root
 ```
-mariadb -u admin -p
+sudo mariadb -u root -p
 ``` 
 password lab: lab
 password: [empty]
