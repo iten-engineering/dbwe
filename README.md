@@ -92,6 +92,8 @@ source path/to/your/script.sql;
 | blog07  | blob      | 07 Benutzer Profile                               |
 
 
+[blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)
+
 Fach Architektur (ITAR)
 - 08 Fehlerbehandlung
 - 09 Follower
@@ -102,7 +104,7 @@ Fach Architektur (ITAR)
 - 14 RESTful API
 
 
-## Lehrmittel Kapitel 5.5ff
+## Lehrmittel Kapitel 5.9ff
 
 Sobald die models.py Datei mit der Definition der Klassen User und Post erstellt ist, können mit der SQLite Datenbank Einträge erstellt und abgefragt werden.
 
