@@ -82,14 +82,14 @@ source path/to/your/script.sql;
 
 ## Apps
 
-| App     | Database  | Lehrmittel                                        |
-| ------- | --------- | ------------------------------------------------- | 
-| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)  | n/a       | 01-03 Basistechnologien, Templates                |
-| [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)  | n/a       | 04 Forms                                          |
-| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)  | blob      | 05 Datenbanken, Models                            |
-| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob      | 05 Datenbanken, Models, DataLoad to/from DB       |
-| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)  | blob      | 06 Benutzer Login                                 |
-| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)  | blob      | 07 Benutzer Profile                               |
+| App     | Database  | Lehrmittel  |
+| ------- | --------- | ----------- | 
+| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 01-03 Basistechnologien, Templates                |
+| [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 04 Forms                                          |
+| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 05 Datenbanken, Models                            |
+| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob | 05 Datenbanken, Models, DataLoad to/from DB       |
+| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 06 Benutzer Login                                 |
+| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 07 Benutzer Profile                               |
 
 
 Fach Architektur (ITAR)
