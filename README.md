@@ -102,7 +102,7 @@ Fach Architektur (ITAR)
 - 14 RESTful API
 
 
-## Lehrmittel Kapitel 5.9ff
+## Lehrmittel Kapitel 5
 
 Sobald die models.py Datei mit der Definition der Klassen User und Post erstellt ist, können mit der SQLite Datenbank Einträge erstellt und abgefragt werden.
 
