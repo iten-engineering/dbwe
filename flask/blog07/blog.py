@@ -27,7 +27,6 @@ from models import User, Post
 from forms import LoginForm, RegistrationForm, EditProfileForm
 
 # load test data
-
 with app.app_context():
     testdata = TestData(db)
     testdata.load()
@@ -36,8 +35,7 @@ with app.app_context():
     users = User.query.all()
     for u in users:
         print(u)
-
-        
+      
 
 # init data service
 ds = DataService()
@@ -56,6 +54,7 @@ def make_shell_context():
 # request handlers
 #
 
+@app.before_request
 def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
