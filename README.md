@@ -48,6 +48,43 @@ use course;
 source path/to/your/script.sql;
 ``` 
 
+## Install DB and create Admin user
+The following steps were executed during the setup of the image. **They have NOT to be repeated.**
+
+Install MariaDB Server and check status:
+``` 
+sudo apt-get install mariadb-server
+sudo systemctl status mariadb
+``` 
+
+Start/Stop database server: 
+``` 
+sudo systemctl start mariadb
+sudo systemctl stop mariadb
+``` 
+
+Enable start at boottime:
+``` 
+sudo systemctl enable mariadb 
+``` 
+
+Login to db server as root:
+``` 
+sudo mariadb -u root -p
+``` 
+- Password for lab: lab
+- Enter password: <empty, just press Enter>
+
+Create user admin with password admin:
+```
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin'; 
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;  
+``` 
+
+Exit db shell:
+``` 
+exit
+``` 
 
 # Python
 
