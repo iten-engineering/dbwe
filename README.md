@@ -124,10 +124,10 @@ exit
 | [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 3. Templates mit Jinja2 (Kapitel 3.2) |
 | [blog03+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03%2B) | n/a  | 3. Templates Microblog (Kapitel 3.3) |
 | [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 4. Forms + eigenes Login/Logout |
-| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 5. Datenbanken, Models |
-| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob | 5. Datenbanken, Models + Load Testdata |
-| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 6. Benutzer Login + Load/Clear Testdata |
-| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 7. Benutzer Profile + Load/Clear Testdata |
+| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blog | 5. Datenbanken, Models |
+| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blog | 5. Datenbanken, Models + Load Testdata |
+| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blog | 6. Benutzer Login + Load/Clear Testdata |
+| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blog | 7. Benutzer Profile + Load/Clear Testdata |
 
 
 ## Apps ITAR
