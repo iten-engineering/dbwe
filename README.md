@@ -300,9 +300,8 @@ Vorherige Apps siehe Kapitel [DBWE - Flask](#dbwe---flask).
 | App     | Database  | Lehrmittel  |
 | ------- | --------- | ----------- | 
 | [blog08](https://github.com/iten-engineering/dbwe/tree/main/flask/blog08) | blog | 8. Fehlerbehandlung  |
+| [blog09](https://github.com/iten-engineering/dbwe/tree/main/flask/blog09) | blog | 9. Follower + Unit Tests  |
 
-
-- 09 Follower
 - 10 Blog Posts
 - 11 E-Mail
 - 12 Bootstrap
