@@ -25,19 +25,8 @@ from data import DataService, TestData
 from models import User, Post
 from forms import LoginForm, RegistrationForm
 
-# load test data
-with app.app_context():
-    testdata = TestData(db)
-    testdata.load()
-
-    print("### Init Testdata ###")
-    users = User.query.all()
-    for u in users:
-        print(u)
-
 # init data service
 ds = DataService()
-
 
 
 #
@@ -50,7 +39,6 @@ def make_shell_context():
 #
 # request handlers
 #
-
 @app.route('/help')
 def help():
     return app.send_static_file('help.html')
@@ -89,6 +77,7 @@ def login():
     # Login (via get)
     return render_template('login.html', form=form)
 
+
 @app.route("/logout")
 def logout():
     username = current_user.username
@@ -115,13 +104,28 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
-@app.route('/welcome')
-def welcome():
-    mike = {
-        "firstname": "Mike",
-        "lastname" : "Müller",
-        "birthday" : "17.04.1966"
-    }
-    return render_template(
-        'welcome.html', title="Chat", user="Sam", text="Test 123",
-        numbers=[1,2,3,4], person=mike) 
+@app.route("/load")
+def load():
+    """Load test data"""
+    with app.app_context():
+        testdata = TestData(db)
+        testdata.load()
+        print("### Load Testdata ###")
+        users = User.query.all()
+        print("Loaded users:")
+        for u in users:
+            print("-", u)
+        print("Loaded posts:")
+        posts = Post.query.all()
+        for p in posts:
+            print("-", p)
+    return redirect(url_for('home'))
+
+
+@app.route("/clear")
+def clear():
+    """Clear test data"""
+    with app.app_context():
+        testdata = TestData(db)
+        testdata.clear()
+    return redirect(url_for('home'))

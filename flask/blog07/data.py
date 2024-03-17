@@ -3,10 +3,8 @@ from models import Post, User
 
 class DataService():
 
-    # 
-    # applicaton data
-    #
     def posts(self):
+        """Returns list with all posts (author and post body)."""
         records = []
         posts = Post.query.all()
         for p in posts:
@@ -15,35 +13,6 @@ class DataService():
             records.append(record)
         return records        
 
-    # 
-    # session data
-    #
-    
-    """ replaced with flask_login module
-    
-    def login(self, username, password):
-        if password == "invalid":
-            return False
-        session['username'] = username
-        return True
-    
-    def logout(self):
-        session.pop('username', None)
-        return True
-
-    def clear(self):
-        session.clear()
-        return True
-
-    def is_logged_in(self):
-        return True if 'username' in session else False
-    
-    def username(self):
-        if 'username' in session:
-            username = session['username']
-            return username
-        return None
-    """
 
 class TestData():
 

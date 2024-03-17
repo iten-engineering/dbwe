@@ -13,20 +13,16 @@ app = Flask(__name__,
     static_folder='static')
 app.config.from_object(Config)
 
+# init db
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+# import models and data services
 from data import DataService, TestData
 from models import User, Post
 
-# load test data
-with app.app_context():
-    testdata = TestData(db)
-    testdata.load()
-
 # init data service
 ds = DataService()
-
 
 #
 # flask shell
@@ -73,3 +69,21 @@ def logout():
     ds.logout()
     flash("Logout of {} successfully done.".format(username))
     return render_template('logout.html', username=username)
+
+
+@app.route("/load")
+def load():
+    """Load test data"""
+    with app.app_context():
+        testdata = TestData(db)
+        testdata.load()
+        print("### Load Testdata ###")
+        users = User.query.all()
+        print("Loaded users:")
+        for u in users:
+            print("-", u)
+        print("Loaded posts:")
+        posts = Post.query.all()
+        for p in posts:
+            print("-", p)
+    return redirect(url_for('home'))

@@ -117,20 +117,20 @@ exit
 
 # Flask
 
-## Apps
+## Apps DBWE
 
-| App     | Database  | Kapitel Lehrmittel |
+| App     | Database  | Lehrmittel  |
 | ------- | --------- | ----------- | 
-| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 1. Basistechnologien, 2. Installation, 3.2 Templates mit Jinja2 |
-| [blog03+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03%2B) | n/a  | 3.3 Templates Microblog |
-| [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 4. Forms mit eigenen Login/Logout |
-| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 5. Datenbanken, Models                      |
-| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob | 5. Datenbanken, Models, DataLoad to/from DB |
-| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 6. Benutzer Login                           |
-| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 7. Benutzer Profile                         |
+| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 3. Templates mit Jinja2 (Kapitel 3.2) |
+| [blog03+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03%2B) | n/a  | 3. Templates Microblog (Kapitel 3.3) |
+| [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 4. Forms + eigenes Login/Logout |
+| [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 5. Datenbanken, Models |
+| [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob | 5. Datenbanken, Models + Load Testdata |
+| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 6. Benutzer Login + Load/Clear Testdata |
+| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 7. Benutzer Profile + Load/Clear Testdata |
 
 
-Fach Architektur (ITAR)
+## Apps ITAR
 - 08 Fehlerbehandlung
 - 09 Follower
 - 10 Blog Posts
@@ -263,26 +263,14 @@ Es muss das bisherige Login ausgebaut werden!
 
 ## Lehrmittel Kapitel 7
 
-Achtung bei der DB Migration infolge der neuen User Felder (Lehrmittel Kapitel 7.5), gibt es Probleme mit den Testdaten. Daher muss für die Migration die Daten zuerst gelöscht werden, dann auskommentiert. Nach der Migration können diese wieder wie bisher geladen werden.
+Achtung bei der DB Migration infolge der neuen User Felder (Lehrmittel Kapitel 7.5), gibt es Probleme mit den Testdaten. Daher muss für die Migration die Daten zuerst gelöscht werden. 
 
 Folgende Schritte sind auszuführen:
+1. Start Anwendung
+2. Navigation zum Menu Help
+3. Link "Clear Testdata" ausführen
 
-1. Löschen der Daten
-   blog.py: anstelle testdata.load() testdata.clear() einfügen
-
-2. Start Anwendung, jetzt werden die Daten gelöscht. Stop Anwendung
-
-3. blog.py: Das Laden der Daten komplett auskommentieren
-   Jetzt kann mit der DB Migration begonnen werden.
-
-4. DB Migration mit:
-   flask db migrate -m "Add new user fields."
-   flast db upgrade
-
-5. blog.py: Laden der Testdaten wieder einkommentieren. 
-   testdata.clear() mit testdata.load() ersetzten
-
-6. Start Anwendung.
+> Nach der Migration können diese wieder wie bisher geladen werden.
 
 
 # Alias

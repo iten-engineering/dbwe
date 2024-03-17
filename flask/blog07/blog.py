@@ -15,6 +15,7 @@ app = Flask(__name__,
     static_folder='static')
 app.config.from_object(Config)
 
+# init database
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
@@ -22,24 +23,13 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 
+# import models and data services
 from data import DataService, TestData
 from models import User, Post
 from forms import LoginForm, RegistrationForm, EditProfileForm
 
-# load test data
-with app.app_context():
-    testdata = TestData(db)
-    testdata.load()
-
-    print("### Init Testdata ###")
-    users = User.query.all()
-    for u in users:
-        print(u)
-      
-
 # init data service
 ds = DataService()
-
 
 
 #
@@ -149,13 +139,28 @@ def edit_profile():
                            form=form)
 
 
-@app.route('/welcome')
-def welcome():
-    mike = {
-        "firstname": "Mike",
-        "lastname" : "Müller",
-        "birthday" : "17.04.1966"
-    }
-    return render_template(
-        'welcome.html', title="Chat", user="Sam", text="Test 123",
-        numbers=[1,2,3,4], person=mike) 
+@app.route("/load")
+def load():
+    """Load test data"""
+    with app.app_context():
+        testdata = TestData(db)
+        testdata.load()
+        print("### Load Testdata ###")
+        users = User.query.all()
+        print("Loaded users:")
+        for u in users:
+            print("-", u)
+        print("Loaded posts:")
+        posts = Post.query.all()
+        for p in posts:
+            print("-", p)
+    return redirect(url_for('home'))
+
+
+@app.route("/clear")
+def clear():
+    """Clear test data"""
+    with app.app_context():
+        testdata = TestData(db)
+        testdata.clear()
+    return redirect(url_for('home'))
