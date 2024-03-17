@@ -61,21 +61,10 @@ def login():
         flash("Login failed, please check your credentials")
     return render_template('login.html', form=form)
 
+
 @app.route("/logout")
 def logout():
     username = ds.username()
     ds.logout()
     flash("Logout of {} successfully done.".format(username))
     return render_template('logout.html', username=username)
-
-
-@app.route('/welcome')
-def welcome():
-    mike = {
-        "firstname": "Mike",
-        "lastname" : "Müller",
-        "birthday" : "17.04.1966"
-    }
-    return render_template(
-        'welcome.html', title="Chat", user="Sam", text="Test 123",
-        numbers=[1,2,3,4], person=mike) 

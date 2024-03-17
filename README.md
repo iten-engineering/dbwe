@@ -126,8 +126,8 @@ exit
 | [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 4. Forms mit eigenen Login/Logout |
 | [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 5. Datenbanken, Models                      |
 | [blog05+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05%2B) | blob | 5. Datenbanken, Models, DataLoad to/from DB |
-| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 06 Benutzer Login                           |
-| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 07 Benutzer Profile                         |
+| [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blob | 6. Benutzer Login                           |
+| [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blob | 7. Benutzer Profile                         |
 
 
 Fach Architektur (ITAR)
