@@ -121,7 +121,7 @@ exit
 
 | App     | Database  | Kapitel Lehrmittel |
 | ------- | --------- | ----------- | 
-| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 1-2 Basistechnologien und Installation, 3.2 Templates mit Jinja2 |
+| [blog03](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03)     | n/a  | 1-2 Basistechnologien/Installation, 3.2 Templates mit Jinja2 |
 | [blog03+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog03%2B) | n/a  | 3.3 Templates Microblog |
 | [blog04](https://github.com/iten-engineering/dbwe/tree/main/flask/blog04)     | n/a  | 4. Forms mit eigenen Login/Logout |
 | [blog05](https://github.com/iten-engineering/dbwe/tree/main/flask/blog05)     | blob | 5. Datenbanken, Models                      |
