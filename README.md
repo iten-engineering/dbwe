@@ -6,7 +6,30 @@ The project contains additions to the [official DBWE source code](https://github
 **Inhalt**
 [TOC]
 
-# SQL
+# Alias
+
+Die Shell hat folgenden `x` - alias definiert. Damit können die Python Umgebung verwaltet werden, das Login in die DB gemacht werden und einfach in die Projektverzeichnisse gewechselt werden. 
+
+Anzeige aliases 'x':
+- alias x='alias | grep x'
+
+Conda environment:
+- alias x-activate='conda activate dbwe'
+- alias x-create='conda env create -f environment.yml'
+- alias x-update='conda env update -f environment.yml'
+
+Database:
+- alias xd='conda activate dbwe; cd /home/lab/workspace/dbwe'
+- alias xdb='mariadb -u admin -p'
+- alias xdbroot='sudo mariadb -u root -p'
+
+Projekte:
+- alias xf='conda activate dbwe; cd /home/lab/workspace/dbwe/flask'
+- alias xp='conda activate dbwe; cd /home/lab/workspace/dbwe/python'
+- alias xs='conda activate dbwe; cd /home/lab/workspace/dbwe/sql'
+- alias xw='conda activate dbwe; cd /home/lab/workspace'
+
+# DBWE - SQL
 
 ## Scripts
 
@@ -86,7 +109,7 @@ Exit db shell:
 exit
 ``` 
 
-# Python
+# DBWE - Python
 
 ## Scripts
 
@@ -115,9 +138,9 @@ exit
 | pip update <package>                | Update a package |
 
 
-# Flask
+# DBWE - Flask
 
-## Apps DBWE
+## Apps
 
 | App     | Database  | Lehrmittel  |
 | ------- | --------- | ----------- | 
@@ -129,18 +152,12 @@ exit
 | [blog06](https://github.com/iten-engineering/dbwe/tree/main/flask/blog06)     | blog | 6. Benutzer Login + Load/Clear Testdata |
 | [blog07](https://github.com/iten-engineering/dbwe/tree/main/flask/blog07)     | blog | 7. Benutzer Profile + Load/Clear Testdata |
 
-
-## Apps ITAR
-- 08 Fehlerbehandlung
-- 09 Follower
-- 10 Blog Posts
-- 11 E-Mail
-- 12 Bootstrap
-- 13 Depoyment
-- 14 RESTful API
+Weitere Apps siehe Kapitel [ITAR - Flask.](#itar---flask)
 
 
-## Lehrmittel Kapitel 5
+## Ergänzungen 
+
+### Lehrmittel Kapitel 5
 
 Sobald die models.py Datei mit der Definition der Klassen User und Post erstellt ist, können mit der SQLite Datenbank Einträge erstellt und abgefragt werden.
 
@@ -256,12 +273,12 @@ Weitere Informationen:
   Lehrmittel Seite 87ff
 
 
-## Lehrmittel Kapitel 6
+### Lehrmittel Kapitel 6
 
 Es muss das bisherige Login ausgebaut werden!
 
 
-## Lehrmittel Kapitel 7
+### Lehrmittel Kapitel 7
 
 Achtung bei der DB Migration infolge der neuen User Felder (Lehrmittel Kapitel 7.5), gibt es Probleme mit den Testdaten. Daher muss für die Migration die Daten zuerst gelöscht werden. 
 
@@ -273,28 +290,25 @@ Folgende Schritte sind auszuführen:
 > Nach der Migration können diese wieder wie bisher geladen werden.
 
 
-# Alias
+# ITAR - Flask
 
-Die Shell hat folgenden `x` - alias definiert. Damit können die Python Umgebung verwaltet werden, das Login in die DB gemacht werden und einfach in die Projektverzeichnisse gewechselt werden. 
+## Apps
 
-Anzeige aliases 'x':
-- alias x='alias | grep x'
+Vorherige Apps siehe Kapitel [DBWE - Flask](#dbwe---flask).
 
-Conda environment:
-- alias x-activate='conda activate dbwe'
-- alias x-create='conda env create -f environment.yml'
-- alias x-update='conda env update -f environment.yml'
 
-Database:
-- alias xd='conda activate dbwe; cd /home/lab/workspace/dbwe'
-- alias xdb='mariadb -u admin -p'
-- alias xdbroot='sudo mariadb -u root -p'
+| App     | Database  | Lehrmittel  |
+| ------- | --------- | ----------- | 
+| [blog08](https://github.com/iten-engineering/dbwe/tree/main/flask/blog08) | blog | 8. Fehlerbehandlung  |
 
-Projekte:
-- alias xf='conda activate dbwe; cd /home/lab/workspace/dbwe/flask'
-- alias xp='conda activate dbwe; cd /home/lab/workspace/dbwe/python'
-- alias xs='conda activate dbwe; cd /home/lab/workspace/dbwe/sql'
-- alias xw='conda activate dbwe; cd /home/lab/workspace'
+
+- 09 Follower
+- 10 Blog Posts
+- 11 E-Mail
+- 12 Bootstrap
+- 13 Depoyment
+- 14 RESTful API
+
 
 ---
 _The end._
