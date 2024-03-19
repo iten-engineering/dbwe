@@ -1,0 +1,19 @@
+2024-03-18 21:49:10,571 ERROR: Exception on /home [GET] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\blog.py", line 97, in home
+    followed_posts=ds.followed_posts(), posts=ds.posts())
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\data.py", line 20, in followed_posts
+    posts = current_user.followed_posts().all()
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\models.py", line 54, in followed_posts
+    followers, (followers.followed_id == Post.user_id)).filter(
+AttributeError: 'Table' object has no attribute 'followed_id'

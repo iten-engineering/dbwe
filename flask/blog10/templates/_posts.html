@@ -1,0 +1,24 @@
+<h2>Own and followed posts</h2>
+<ul>
+    {% for p in followed_posts %}
+    <li>{{ p.author.username }}: {{  p.body }}</li>
+    {% endfor %}
+</ul>
+
+<h2>All posts</h2>
+<ul>
+    {% for p in posts %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ p.author.avatar(36) }}"></td>
+            <td>
+                <a href="{{ url_for('user', username=p.author.username) }}">
+                    {{ p.author.username }}
+                </a>
+                says: <br />{{ p.body }}
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</ul>
+

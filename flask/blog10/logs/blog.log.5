@@ -1,0 +1,31 @@
+2024-03-18 21:28:24,181 ERROR: Exception on /home [GET] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\blog.py", line 96, in home
+    return render_template('home.html', username=current_user.username, posts=ds.posts())
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\templates\home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\templates\base.html", line 20, in top-level template code
+    {% block content %}
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10\templates\home.html", line 11, in block 'content'
+    {{ form.hidden_tag() }}
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
