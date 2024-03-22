@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Home</h1>    
+
+    <!-- Welcome current user -->
+    Welcome {{ username }}
+
+    <!-- Create new post-->
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.post.label }}<br>
+            {{ form.post(cols=32, rows=4) }}<br>
+            {% for error in form.post.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    <!-- Show followed posts and all posts -->
+    <h2>All posts</h2>
+    {% include '_posts.html' %}
+
+{% endblock %}
+

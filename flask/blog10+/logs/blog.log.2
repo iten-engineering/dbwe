@@ -1,0 +1,23 @@
+2024-03-20 07:28:51,689 ERROR: Exception on /user/Sam [GET] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10+\blog.py", line 175, in user
+    next_url = url_for('user/<username>', page=followed_posts.next_num) if followed_posts.has_next else None
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\helpers.py", line 225, in url_for
+    return current_app.url_for(
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user/<username>' with values ['page']. Did you mean 'user' instead?

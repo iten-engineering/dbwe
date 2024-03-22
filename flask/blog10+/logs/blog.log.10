@@ -1,0 +1,15 @@
+2024-03-19 22:07:05,659 ERROR: Exception on /home [GET] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog10+\blog.py", line 98, in home
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, Config.POSTS_PER_PAGE, False)
+TypeError: Query.paginate() takes 1 positional argument but 4 were given

@@ -301,10 +301,13 @@ Vorherige Apps siehe Kapitel [DBWE - Flask](#dbwe---flask).
 | ------- | --------- | ----------- | 
 | [blog08](https://github.com/iten-engineering/dbwe/tree/main/flask/blog08) | blog | 8. Fehlerbehandlung  |
 | [blog09](https://github.com/iten-engineering/dbwe/tree/main/flask/blog09) | blog | 9. Follower + Unit Tests  |
+| [blog10](https://github.com/iten-engineering/dbwe/tree/main/flask/blog10) | blog | 10. Blog Posts  |
+| [blog10+](...) | blog | 10. Blog Posts + Paginierung |
 
-- 10 Blog Posts
-- 11 E-Mail
-- 12 Bootstrap
+| [blog11](...) | blog | 11. E-Mail + Password Reset (ohne Kapitel 11.5-11.9) |
+| [blog12](...) | blog | 12. Bootstrap |
+
+
 - 13 Depoyment
 - 14 RESTful API
 

@@ -1,0 +1,13 @@
+2024-03-20 18:19:17,154 ERROR: Exception on /reset_password_request [POST] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog11\blog.py", line 255, in reset_password_request
+    app.log.warn("Invalid email, no user found for password reset")
+AttributeError: 'Flask' object has no attribute 'log'

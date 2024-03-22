@@ -9,6 +9,7 @@ dependencies:
       - matplotlib==3.7.*
       - openpyxl==3.1.*
       - pylint==2.17.*
+      - pyjwt==2.1.*
       - mariadb==1.1.*
       - Flask==2.3.*
       - wtforms==3.0.*
@@ -16,5 +17,8 @@ dependencies:
       - flask-sqlalchemy==3.0.*
       - flask-migrate==4.0.*
       - flask-login==0.6.*
+      - flask-mail==0.9.*
+      - flask-bootstrap==3.3.7.1
+      - flask-httpauth==4.4.0
       - werkzeug==2.3.*
       - email-validator==2.0.*

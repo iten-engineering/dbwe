@@ -1,0 +1,26 @@
+<ul>
+    {% for p in posts %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ p.author.avatar(36) }}"></td>
+            <td>
+                <a href="{{ url_for('user', username=p.author.username) }}">
+                    {{ p.author.username }}
+                </a>
+                says: <br />{{ p.body }}
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</ul>
+
+{% if next_url %}
+    &nbsp;
+    <a href="{{ next_url }}">&lt; Older posts</a>
+{% endif %}
+
+{% if prev_url %}
+    &nbsp;
+    <a href="{{ prev_url }}">Newer posts &gt;</a>
+{% endif %}
+

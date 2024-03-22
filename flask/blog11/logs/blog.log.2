@@ -1,0 +1,15 @@
+2024-03-20 18:20:33,361 ERROR: Exception on /reset_password_request [POST] [in D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\dev\software\miniconda3\envs\dbwe\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog11\blog.py", line 253, in reset_password_request
+    emailsender.send_password_reset(user)
+  File "D:\dev\workspace\iten-engineering\dbwe\flask\blog11\emailsender.py", line 58, in send_password_reset
+    self.app.log.info(f"Send password reset email to: {user.email}")
+AttributeError: 'Flask' object has no attribute 'log'
