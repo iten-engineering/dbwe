@@ -4,7 +4,11 @@ Datenbank und Web Entwicklung (DBWE) Ergänzungen
 The project contains additions to the [official DBWE source code](https://github.com/dozent2018/IFA_DBWE) with some more examples and code snippets. The source code is delivered as is, under the [MIT License](LICENSE). Feel free to use, share or clone it for your needs.
 
 **Inhalt**
-[TOC]
+- [Alias Image](#alias)
+- [DBWE SQL](#dbwe---sql)
+- [DBWE Python](#dbwe---python)
+- [DBWE Flask](#dbwe---flask)
+- [ITAR Flask](#itar---flask)
 
 # Alias
 
@@ -302,14 +306,9 @@ Vorherige Apps siehe Kapitel [DBWE - Flask](#dbwe---flask).
 | [blog08](https://github.com/iten-engineering/dbwe/tree/main/flask/blog08) | blog | 8. Fehlerbehandlung  |
 | [blog09](https://github.com/iten-engineering/dbwe/tree/main/flask/blog09) | blog | 9. Follower + Unit Tests  |
 | [blog10](https://github.com/iten-engineering/dbwe/tree/main/flask/blog10) | blog | 10. Blog Posts  |
-| [blog10+](...) | blog | 10. Blog Posts + Paginierung |
-
-| [blog11](...) | blog | 11. E-Mail + Password Reset (ohne Kapitel 11.5-11.9) |
+| [blog10+](https://github.com/iten-engineering/dbwe/tree/main/flask/blog10%2B) | blog | 10. Blog Posts + Paginierung |
+| [blog11](https://github.com/iten-engineering/dbwe/tree/main/flask/blog11) | blog | 11. E-Mail + Password Reset (ohne Kapitel 11.5-11.9) |
 | [blog12](...) | blog | 12. Bootstrap |
-
-
-- 13 Depoyment
-- 14 RESTful API
 
 
 ---
